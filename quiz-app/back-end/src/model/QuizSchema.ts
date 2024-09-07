@@ -22,4 +22,5 @@ const quizSchema: Schema = new Schema({
   },
 });
 
-const UserModel = mongoose.model("quizies", quizSchema);
+const QuizSchema = mongoose.model("quizies", quizSchema);
+export default QuizSchema;
