@@ -1,50 +1,60 @@
 [
     {
+        "_id": 0,
         "ask": "Qual é a capital do Brasil?",
         "option": ["São Paulo", "Brasília", "Rio de Janeiro", "Salvador"],
         "right_answer": "Brasília"
     },
     {
+        "_id": 1,
         "ask": "Qual planeta é conhecido como o Planeta Vermelho?",
         "option": ["Terra", "Júpiter", "Marte", "Vênus"],
         "right_answer": "Marte"
     },
     {
+        "_id": 2,
         "ask": "Quem pintou a Mona Lisa?",
         "option": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
         "right_answer": "Leonardo da Vinci"
     },
     {
+        "_id": 3,
         "ask": "Em que ano o homem pisou na Lua pela primeira vez?",
         "option": ["1965", "1969", "1972", "1975"],
         "right_answer": "1969"
     },
     {
+        "_id": 4,
         "ask": "Qual é o maior oceano do mundo?",
         "option": ["Oceano Atlântico", "Oceano Índico", "Oceano Pacífico", "Oceano Ártico"],
         "right_answer": "Oceano Pacífico"
     },
     {
+        "_id": 5,
         "ask": "Qual é o símbolo químico do ouro?",
         "option": ["Au", "Ag", "O", "Fe"],
         "right_answer": "Au"
     },
     {
+        "_id": 6,
         "ask": "Quem escreveu 'Dom Quixote'?",
         "option": ["Gabriel García Márquez", "William Shakespeare", "Miguel de Cervantes", "José Saramago"],
         "right_answer": "Miguel de Cervantes"
     },
     {
+        "_id": 7,
         "ask": "Quantos continentes existem no mundo?",
         "option": ["5", "6", "7", "8"],
         "right_answer": "7"
     },
     {
+        "_id": 8,
         "ask": "Qual é o maior mamífero do mundo?",
         "option": ["Elefante", "Baleia-azul", "Girafa", "Orca"],
         "right_answer": "Baleia-azul"
     },
     {
+        "_id": 9,
         "ask": "Em que país as Olimpíadas de 2020 foram realizadas?",
         "option": ["China", "Brasil", "Japão", "França"],
         "right_answer": "Japão"

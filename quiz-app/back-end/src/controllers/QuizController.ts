@@ -1,35 +1,43 @@
 import { Response, Request } from "express";
 import QuizSchema from "../model/QuizSchema";
-import { Quiz } from '../types/Quiz';
+import { Quiz } from "../types/Quiz";
 
-export function createQuiz(req: Request, res: Response) {
-    const { ask, option, right_answer }: Quiz = req.body;
+export async function createQuiz(req: Request, res: Response) {
+  const quiz: Quiz = req.body;
 
-    try {
-        const quiz = { ask, option, right_answer };
-        const newQuiz = QuizSchema.create(quiz);
-        console.log(newQuiz);
-    } catch(err) {
-        console.log(err)
-    }
-
-    res.status(200).json(req.body);
+  try {
+    const newQuiz = await QuizSchema.create(quiz);
+    console.log(newQuiz);
+    return newQuiz;
+    res.status(200).json(newQuiz);
+  } catch (err) {
+    console.log(err);
+    return res.status(422).json(err);
+  }
 }
 
-export function deleteQuiz(req: Request, res: Response) {
-    res.send('quiz deleted');
+export async function deleteQuiz(req: Request, res: Response) {
+  const { id } = req.body.params.id;
+  console.log(id);
+
+  try {
+    const deletedQuiz = await QuizSchema.deleteOne({ _id: id });
+    return res.status(200).json(deletedQuiz);
+  } catch (err) {
+    console.log(err);
+    return res.status(422).json(err);
+  }
 }
 
-export function updateQuiz(req: Request, res: Response) {
-}
+export function updateQuiz(req: Request, res: Response) {}
 
 export function getQuiz(req: Request, res: Response) {
-    const quiz = req.params.id;
+  const quiz = req.params.id;
 
-    try {
-        const QuizById = QuizSchema.findById(quiz);
-        res.status(200).json(QuizById);
-    } catch(err) {
-        console.log(err);
-    }
+  try {
+    const QuizById = QuizSchema.findById(quiz);
+    res.status(200).json(QuizById);
+  } catch (err) {
+    console.log(err);
+  }
 }

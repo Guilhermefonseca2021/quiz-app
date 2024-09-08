@@ -1,5 +1,7 @@
 export default function Home() {
   return (
-    <div>Home</div>
+    <div className="w-full">
+      <h2 className="text-lg text-black">Quiz</h2>
+    </div>
   )
 }

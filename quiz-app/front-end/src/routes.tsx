@@ -7,7 +7,7 @@ export default function Router() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/" element={<Quiz />} />
+        <Route path="/quiz" element={<Quiz />} />
         {/* <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} /> */}
       </Routes>

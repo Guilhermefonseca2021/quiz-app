@@ -1,6 +1,10 @@
+import quiz from "../../api/quizies.json";
 
+console.log(quiz)
 export default function Quiz() {
   return (
-    <div>Quiz</div>
+    <div className="">
+      
+    </div>
   )
 }
