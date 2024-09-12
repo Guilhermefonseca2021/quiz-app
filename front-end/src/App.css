@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 html {
+    max-width: 1456px;
     background-color: #271A45;
 }

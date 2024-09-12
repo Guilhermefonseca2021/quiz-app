@@ -6,7 +6,7 @@ export default function QuizSection() {
   const [quizId, setQuizId] = useState(0);
   const [myQuiz, setMyQuiz] = useState<Quiz | undefined>();
   const { getQuizById } = formatQuestions();
-
+  
   const memorizedGetQuizById = useCallback(() => getQuizById(quizId), [getQuizById, quizId]);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function QuizSection() {
 
   return (
     <div>
-      <h2 className="text-gray-200 text-2xl">{myQuiz?.ask}</h2>
+      <h2 className="text-gray-200 text-4xl my-12">{myQuiz?.ask}</h2>
       <div className="grid grid-cols-2 gap-4">
         {myQuiz?.option.map((option, index) => (
           <input
@@ -51,7 +51,7 @@ export default function QuizSection() {
             type="submit"
             value={option}
             onClick={handleValidateQuiz}
-            className="bg-green-500 hover:bg-green-600 hover:text-stone-300 text-stone-100 transition border-solid border-2 border-teal-400 rounded"
+            className="bg-green-500 hover:bg-green-600 hover:text-stone-300 text-stone-100 transition border-solid border-2 border-teal-400 rounded p-6"
           />
         ))}
       </div>
