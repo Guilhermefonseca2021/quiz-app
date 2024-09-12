@@ -6,7 +6,7 @@ export default function LayoutDefault() {
     <div className="">
         <Header />
         <section className=" p-12 flex justify-center h-full w-full bg-[#271A45]">
-          <QuizSection ></QuizSection>
+          <QuizSection />
         </section>
     </div>
   )
