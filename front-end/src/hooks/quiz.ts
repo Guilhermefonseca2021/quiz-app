@@ -1,8 +1,9 @@
 import api from "../api/quizies.json";
 
 export default function formatQuestions() {
-  function getQuizById(id: number) {
-    api.find(quiz => quiz._id === id); 
+  const getQuizById = async (id: number) => {
+    const QuizByNumber = await api.filter(quiz => quiz._id === id); 
+    return QuizByNumber;
   }
 
   return { getQuizById };
