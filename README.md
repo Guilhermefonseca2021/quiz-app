@@ -18,26 +18,17 @@
 <h2>🚀 Tecnologias</h2>
 <ul>
   <li><strong>Frontend:</strong> React, HTML, CSS</li>
-  <li><strong>Backend:</strong> Node.js, Express</li>
-  <li><strong>Banco de Dados:</strong> MongoDB</li>
 </ul>
 
 <h2>🛠 Funcionalidades</h2>
 <ul>
-  <li>Usuários podem se cadastrar e fazer login</li>
-  <li>Escolha de diferentes categorias de quiz</li>
   <li>Perguntas com múltiplas opções de resposta</li>
-  <li>Contagem de pontos baseada nas respostas corretas</li>
-  <li>Salvamento de pontuações no banco de dados</li>
 </ul>
 
 <h2>⚙️ Instalação</h2>
 <ol>
   <li>Clone este repositório: <code>git clone https://github.com/seu-usuario/quiz-app.git</code></li>
-  <li>Instale as dependências do backend: <code>cd backend && npm install</code></li>
   <li>Instale as dependências do frontend: <code>cd frontend && npm install</code></li>
-  <li>Crie um arquivo <code>.env</code> na pasta <code>backend</code> com as variáveis de ambiente necessárias (por exemplo, conexão com MongoDB, chaves secretas)</li>
-  <li>Inicie o servidor: <code>cd backend && npm start</code></li>
   <li>Inicie o frontend: <code>cd frontend && npm start</code></li>
   <li>Acesse a aplicação em <code>http://localhost:3000</code></li>
 </ol>
@@ -45,11 +36,6 @@
 <h2>📂 Estrutura do Projeto</h2>
 <pre>
 📦quiz-app
- ┣ 📂backend
- ┃ ┣ 📂models
- ┃ ┣ 📂routes
- ┃ ┣ 📂controllers
- ┃ ┗ server.js
  ┣ 📂frontend
  ┃ ┣ 📂src
  ┃ ┣ ┣ 📂components

@@ -6,6 +6,7 @@ export default function QuizSection() {
   const [quizId, setQuizId] = useState(0);
   const [myQuiz, setMyQuiz] = useState<Quiz | undefined>();
   const { getQuizById } = formatQuestions();
+<<<<<<< HEAD
 
   function formatQuestions() {
     const getQuizById = async (id: number) => {
@@ -20,6 +21,10 @@ export default function QuizSection() {
     () => getQuizById(quizId),
     [getQuizById, quizId]
   );
+=======
+  
+  const memorizedGetQuizById = useCallback(() => getQuizById(quizId), [getQuizById, quizId]);
+>>>>>>> c4594bb9e733386f0b4d268ecd8751a9033f4d91
 
   useEffect(() => {
     async function fetchQuiz() {
@@ -54,6 +59,7 @@ export default function QuizSection() {
 
   return (
     <div>
+<<<<<<< HEAD
       <div className="bg-violet-950 p-8 w-96 h-80 rounded-lg">
         <div className="flex p-2 gap-1">
           <div className="">
@@ -82,6 +88,19 @@ export default function QuizSection() {
             ))}
           </div>
         </div>
+=======
+      <h2 className="text-gray-200 text-4xl my-12">{myQuiz?.ask}</h2>
+      <div className="grid grid-cols-2 gap-4">
+        {myQuiz?.option.map((option, index) => (
+          <input
+            key={index}
+            type="submit"
+            value={option}
+            onClick={handleValidateQuiz}
+            className="bg-green-500 hover:bg-green-600 hover:text-stone-300 text-stone-100 transition border-solid border-2 border-teal-400 rounded p-6"
+          />
+        ))}
+>>>>>>> c4594bb9e733386f0b4d268ecd8751a9033f4d91
       </div>
     </div>
   );
